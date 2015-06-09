@@ -5,11 +5,11 @@ namespace InterviewProject.UnitTests
     [TestFixture]
     public class EvenFibonacciNumbersSumUnitTests
     {
-        private readonly EvenFibonacciNumbersSum _fizzbuzz;
+        private readonly EvenFibonacciNumbersSum _evenFibonacciNumbers;
 
         public EvenFibonacciNumbersSumUnitTests()
         {
-            _fizzbuzz = new EvenFibonacciNumbersSum();
+            _evenFibonacciNumbers = new EvenFibonacciNumbersSum();
         }
 
         [TestCase(10, 10)]
@@ -19,7 +19,7 @@ namespace InterviewProject.UnitTests
         [TestCase(4000000, 4613732)]
         public void ItReturnsCorrectValue(int upperLimit, int expectedResult)
         {
-            var result = _fizzbuzz.Execute(upperLimit);
+            var result = _evenFibonacciNumbers.Execute(upperLimit);
             Assert.That(result, Is.EqualTo(expectedResult));
         }
     }

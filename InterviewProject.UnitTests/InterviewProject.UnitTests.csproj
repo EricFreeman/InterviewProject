@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="EvenFibonacciNumbersSumUnitTests.cs" />
     <Compile Include="FizzBuzzUnitTests.cs" />
+    <Compile Include="LargestProductInSeriesUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

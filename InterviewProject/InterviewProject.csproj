@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="EvenFibonacciNumbersSum.cs" />
     <Compile Include="FizzBuzz.cs" />
+    <Compile Include="LargestProductInSeries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
