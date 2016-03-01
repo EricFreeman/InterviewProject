@@ -12,32 +12,43 @@ namespace InterviewProject.UnitTests
             _fizzbuzz = new FizzBuzz();
         }
 
-        [Test]
-        public void ItReturnsFizz_WhenNumberIsDivisibleBy3()
+        [TestCase(3)]
+        [TestCase(6)]
+        [TestCase(9)]
+        [TestCase(12)]
+        public void ItReturnsFizz_WhenNumberIsDivisibleBy3(int input)
         {
-            var result = _fizzbuzz.Execute(3);
+            var result = _fizzbuzz.Execute(input);
             Assert.That(result, Is.EqualTo("Fizz"));
         }
 
-        [Test]
-        public void ItReturnsBuzz_WhenNumberIsDivisibleBy5()
+        [TestCase(5)]
+        [TestCase(10)]
+        [TestCase(20)]
+        [TestCase(25)]
+        public void ItReturnsBuzz_WhenNumberIsDivisibleBy5(int input)
         {
-            var result = _fizzbuzz.Execute(5);
+            var result = _fizzbuzz.Execute(input);
             Assert.That(result, Is.EqualTo("Buzz"));
         }
 
-        [Test]
-        public void ItReturnsFizzBuzz_WhenNumberIsDivisibleBy3And5()
+        [TestCase(15)]
+        [TestCase(30)]
+        [TestCase(45)]
+        [TestCase(60)]
+        public void ItReturnsFizzBuzz_WhenNumberIsDivisibleBy3And5(int input)
         {
-            var result = _fizzbuzz.Execute(15);
+            var result = _fizzbuzz.Execute(input);
             Assert.That(result, Is.EqualTo("FizzBuzz"));
         }
 
-        [Test]
-        public void ItReturnsJustTheNumber_WhenNumberIsDivisibleByNeither3Nor5()
+        [TestCase(2)]
+        [TestCase(8)]
+        [TestCase(16)]
+        public void ItReturnsJustTheNumber_WhenNumberIsDivisibleByNeither3Nor5(int input)
         {
-            var result = _fizzbuzz.Execute(2);
-            Assert.That(result, Is.EqualTo("2"));
+            var result = _fizzbuzz.Execute(input);
+            Assert.That(result, Is.EqualTo(input.ToString()));
         }
     }
 }
