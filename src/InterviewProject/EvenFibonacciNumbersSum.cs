@@ -14,7 +14,33 @@ namespace InterviewProject
         /// </summary>
         public int Execute(int upperLimit)
         {
-            throw new NotImplementedException();
+            int i = 0;
+            int j = 1;
+            //int fib = 1;
+            int sum = 0;
+
+            // calculate Fibonacci sequence
+            // sum even numbers up to given upperLimit
+            do
+            {
+                if (j % 2 == 0)
+                {
+                    sum += j;
+                }
+
+                int temp = j;
+                j = nextFib(i, j);
+                i = temp;
+
+            } while (j <= upperLimit);
+
+            return sum;
+        }
+
+        // recursive function to calculate next number in Fibonacci sequence
+        int nextFib(int prevFib1, int prevFib2)
+        {
+            return prevFib1 + prevFib2;
         }
     }
 }

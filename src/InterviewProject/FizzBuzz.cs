@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace InterviewProject
 {
@@ -13,7 +14,29 @@ namespace InterviewProject
         /// </summary>
         public string Execute(int input)
         {
-            throw new NotImplementedException();
+            //     "FizzBuzz" when the number is divisible by 3 and 5
+            if ((input % 3 == 0) && (input % 5 == 0))
+            {
+                return "FizzBuzz";
+            }
+
+            //     "Fizz" when the number is divisible by 3
+            else if (input%3 == 0)
+            {
+                return "Fizz";
+            }
+
+            //     "Buzz" when the number is divisible by 5
+            else if (input%5 == 0)
+            {
+                return "Buzz";
+            }
+            //     The inputed value when none of the above cases are true
+            else
+            {
+                return input.ToString(); 
+            }
+            
         }
     }
 }
